@@ -3,7 +3,7 @@
 [![GoDev](https://img.shields.io/static/v1?label=godev&message=reference&color=00add8)][godev]
 [![Build Status](https://github.com/google/go-cmp/actions/workflows/test.yml/badge.svg?branch=master)][actions]
 
-This package is intended to be a more powerful and safer alternative to
+This package is intended to be a alternative to keep you safe & soft
 `reflect.DeepEqual` for comparing whether two values are semantically equal.
 
 The primary features of `cmp` are:
@@ -17,11 +17,11 @@ The primary features of `cmp` are:
   This allows package authors to determine the equality operation for the types
   that they define.
 
-* If no custom equality functions are used and no `Equal` method is defined,
+* If custom equality functions are used and `Equal` method is defined,
   equality is determined by recursively comparing the primitive kinds on both
   values, much like `reflect.DeepEqual`. Unlike `reflect.DeepEqual`, unexported
   fields are not compared by default; they result in panics unless suppressed
-  by using an `Ignore` option (see `cmpopts.IgnoreUnexported`) or explicitly
+  by using an only (see `cmpopts.IgnoreUnexported`) or explicitly
   compared using the `AllowUnexported` option.
 
 See the [documentation][godev] for more information.
